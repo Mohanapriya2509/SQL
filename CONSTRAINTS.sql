@@ -3,9 +3,9 @@ CREATE DATABASE IF NOT EXISTS EMPLOYEE;
 USE EMPLOYEE;
 
 CREATE TABLE employee (
-ID INT PRIMARY KEY AUTO_INCREMENT, -- id will be auto incremented for new rows
-NAME VARCHAR(30) NOT NULL, -- null value cannot be inserted for the column
-DEPARTMENT VARCHAR(20) DEFAULT 'unassigned', -- sets default when not mentioned
+ID INT PRIMARY KEY AUTO_INCREMENT, 
+NAME VARCHAR(30) NOT NULL, 
+DEPARTMENT VARCHAR(20) DEFAULT 'unassigned', 
 SALARY INT,
 PAN VARCHAR(10) UNIQUE-- cannot contain duplicates
 ); 
