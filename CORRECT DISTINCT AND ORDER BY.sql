@@ -1,0 +1,37 @@
+-- Create the EMPLOYEE table
+CREATE DATABASE EMPLOYEE;
+USE EMPLOYEE;
+CREATE TABLE EMPLOYEE(
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(30),
+    SALARY INT,
+    DEPARTMENT VARCHAR(50)
+);
+
+-- Insert data into the EMPLOYEE table
+INSERT INTO EMPLOYEE(ID, NAME, SALARY, DEPARTMENT) VALUES
+    (1, 'SHALU', 10000, 'HR'),
+    (2, 'RIYA', 5000, 'MANAGER'),
+    (3, 'NIRMALA', 7000, 'MANAGER'),
+    (4, 'LAVU', 5000, 'MANAGER'),
+    (5, 'MOHANAPRIYA', 50000, 'CEO'),
+    (6, 'VANI', 20000, 'HR');
+
+-- Select all records from the EMPLOYEE table
+SELECT * FROM EMPLOYEE;
+
+-- Select distinct IDs from the EMPLOYEE table
+SELECT DISTINCT ID FROM EMPLOYEE;
+
+-- Select all records from the EMPLOYEE table again
+SELECT * FROM EMPLOYEE;
+
+-- Select all records from the EMPLOYEE table ordered by salary
+SELECT * FROM EMPLOYEE
+ORDER BY SALARY;
+SELECT * FROM EMPLOYEE
+ORDER BY (CASE DEPARTMENT
+WHEN "CEO" THEN 1
+WHEN "MANAGER" THEN 2
+WHEN "HR" THEN 3 
+ELSE 0 END);
